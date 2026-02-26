@@ -4,7 +4,8 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
+    margin-left: 20px;
 }
 .search-container {
     display: flex;
@@ -152,6 +153,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
 
