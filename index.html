@@ -7,22 +7,35 @@
     <link rel="stylesheet" href="./Software/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
-<div id="introSection">
-    <p>
-        <strong>V-Score-Search</strong> is a web-based platform designed for the public to explore 
-        V-scores and VL-scores across protein clusters from five major databases: 
-        PHROG, VOG, KEGG, Pfam, and eggNOG. These scores serve as quantitative 
-        "virus-like signatures" that differentiate viral from non-viral protein families and genomes. 
-        We demonstrate their utility through specific use cases, including virus identification, 
-        prophage discovery, and the annotation of host-derived or metabolic proteins within viral genomes. 
-        By defining the likelihood of a protein family’s viral origin, V-scores and VL-scores enable 
-        diverse applications in viral genomics, ecology, and evolution. 
-        For detailed methodology, please refer to our paper 
-        (<a href="https://www.biorxiv.org/content/10.1101/2024.10.24.619987v1" target="_blank">bioRxiv preprint</a>); 
-        to implement these metrics in your own viral identification, visit our 
-        <a href="https://github.com/AnantharamanLab/V-Score-Search" target="_blank">GitHub pipeline</a>.
-    </p>
-</div>
+
+<body>
+
+    <!-- Header Image -->
+    <img src="./Software/LabHeader.jpg" alt="Header of Lab" id="headerImage">
+
+    <!-- Main Title -->
+    <h1>V-Score Search</h1>
+
+    <!-- Intro Section -->
+    <div id="introSection">
+        <p>
+            <strong>V-Score-Search</strong> is a web-based platform designed for the public to explore 
+            V-scores and VL-scores across protein clusters from five major databases: 
+            PHROG, VOG, KEGG, Pfam, and eggNOG. These scores serve as quantitative 
+            "virus-like signatures" that differentiate viral from non-viral protein families and genomes. 
+            We demonstrate their utility through specific use cases, including virus identification, 
+            prophage discovery, and the annotation of host-derived or metabolic proteins within viral genomes. 
+            By defining the likelihood of a protein family’s viral origin, V-scores and VL-scores enable 
+            diverse applications in viral genomics, ecology, and evolution. 
+            For detailed methodology, please refer to our paper 
+            (<a href="https://www.biorxiv.org/content/10.1101/2024.10.24.619987v1" target="_blank">bioRxiv preprint</a>); 
+            to implement these metrics in your own viral identification, visit our 
+            <a href="https://github.com/AnantharamanLab/V-Score-Search" target="_blank">GitHub pipeline</a>.
+        </p>
+    </div>
+
+    <!-- Instructions Box -->
+    <div id="instructionsBox">
         <h2>Instructions</h2>
         <p>Choose database, then accession</p>
         <p>ex. [VOG, VOG00001]</p>
@@ -31,18 +44,23 @@
         <p>Databases: KEGG, eggNOG, Pfam, PHROG, VOG</p>
         <p>You can also search by protein name</p>
     </div>
-    <img src="./Software/LabHeader.jpg" alt="Header of Lab" id="headerImage">
-    <h1>V-Score Search</h1>
 
+    <!-- Keyword Search Title -->
     <h3 class="keyword-title">KEYWORD SEARCH</h3>
 
+    <!-- Search Section -->
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search...">
         <button id="goButton">Go</button>
         <button id="exampleButton">Example</button>
     </div>
-    <a href="VScoreData.csv" download="VScoreData.csv">Export CSV</a>
-    
+
+    <!-- Export Link -->
+    <div style="text-align:center; margin-bottom:15px;">
+        <a href="VScoreData.csv" download="VScoreData.csv">Export CSV</a>
+    </div>
+
+    <!-- Data Table -->
     <table id="dataTable">
         <thead>
             <tr>
@@ -54,19 +72,20 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Data will be inserted here dynamically -->
+            <!-- Data inserted dynamically -->
         </tbody>
     </table>
-    
-    <!-- Pagination container -->
+
+    <!-- Pagination -->
     <div id="pagination"></div>
-    
+
+    <!-- Footer -->
     <footer>
         <p>Source: Citations Go Here</p>
     </footer>
+
+    <!-- Script -->
     <script src="./Software/script.js"></script>
+
 </body>
 </html>
-
-
-
