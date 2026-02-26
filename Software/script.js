@@ -159,6 +159,15 @@ function sortData(column) {
         filterData();
     });
 
+    // Trigger Go when pressing Enter inside search box
+    document.getElementById('searchInput').addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();  // Prevent accidental form behavior
+            currentPage = 1;
+            filterData();
+        }
+    });
+
     // Example button autofills and searches
     document.getElementById('exampleButton').addEventListener('click', () => {
         searchInput.value = "K04763";
@@ -177,4 +186,5 @@ function sortData(column) {
     // Load CSV data on page load
     loadCSV();
 });
+
 
