@@ -39,15 +39,6 @@ h1 {
     text-decoration: underline;
 }
 
-#instructionsBox {
-    float: right;         /* Float the box to the right */
-    width: 200px;         /* Set a smaller width */
-    margin: 10px;         /* Add some margin */
-    padding: 10px;        /* Internal padding */
-    background-color: #f9f9f9;  /* Background color */
-    border: 1px solid #ccc;     /* Border style */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Shadow for a subtle 3D effect */
-}
 
 #searchInstructions {
     text-align: center;
@@ -137,6 +128,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
 
