@@ -98,14 +98,17 @@ table {
 }
 
 .search-container button {
-    padding: 10px 10px;
-    margin-left: 5px;
-    font-size: 14px;
+    padding: 8px 12px;       /* slightly smaller top/bottom and left/right for better alignment */
+    margin-left: 5px;        /* space between buttons */
+    font-size: 14px;         
+    height: 36px;            /* match the height of the search input */
+    line-height: 1;          /* ensure text is vertically centered */
     cursor: pointer;
     border: none;
     background-color: #bd1919;
     color: white;
     border-radius: 4px;
+    box-sizing: border-box;  /* ensures padding doesn't increase total width */
 }
 
 .search-container button:hover {
@@ -149,6 +152,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
 
