@@ -17,6 +17,28 @@ h1 {
     margin-bottom: 20px;
     font-size: 16px;
 }
+
+#introSection {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background-color: #f4f7fb;
+    border-left: 5px solid #bd1919;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#introSection a {
+    color: #bd1919;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#introSection a:hover {
+    text-decoration: underline;
+}
+
 #instructionsBox {
     float: right;         /* Float the box to the right */
     width: 200px;         /* Set a smaller width */
@@ -106,5 +128,6 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
