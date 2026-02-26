@@ -37,6 +37,14 @@ h1 {
     font-size: 0.7em;
 }
 
+.keyword-title {
+    text-align: center;
+    color: blue;
+    margin-bottom: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -84,3 +92,4 @@ footer {
 footer p {
     margin: 0;
 }
+
