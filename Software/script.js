@@ -194,30 +194,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // =========================
     // Export Filtered CSV
-    // =========================
+    // Export button triggers CSV download of filtered data
     document.getElementById('exportButton').addEventListener('click', () => {
         const filters = searchInput.value.toLowerCase().split(',').map(f => f.trim());
+
+        // Filter tableData based on current search input
         const filteredData = tableData.filter(row => {
             return filters.every(filter => {
-                return Object.values(row).some(value => value.toString().toLowerCase().includes(filter));
+                return Object.values(row).some(value =>
+                    value.toString().toLowerCase().includes(filter)
+                );
             });
         });
 
-        if (filteredData.length === 0) {
-            alert("No data to export based on current search.");
-            return;
-        }
-
+        // Convert filtered data to CSV
         const csv = Papa.unparse(filteredData);
+
+        // Create a blob and generate download link
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = "VScoreData_filtered.csv";
+
+        // Use search query in file name, replace spaces/illegal chars with underscores
+        let queryName = searchInput.value.trim() || "All";
+        queryName = queryName.replace(/[^a-zA-Z0-9_-]/g, "_"); // safe file name
+        const fileName = `V-ScoreData_${queryName}.csv`;
+
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.setAttribute("download", fileName);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        URL.revokeObjectURL(url);
     });
 
     // =========================
@@ -235,3 +241,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================
     loadCSV();
 });
+
