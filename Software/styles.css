@@ -20,13 +20,13 @@ h1 {
 
 #introSection {
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 20px 20px;
     padding: 15px 20px;
     background-color: #f4f7fb;
     border-left: 5px solid #bd1919;
     font-size: 15px;
     line-height: 1.6;
-    text-align: justify;
+    text-align: left; 
 }
 
 #introSection a {
@@ -69,13 +69,13 @@ h1 {
 
 #citationBlock {
     max-width: 900px;
-    margin: 15px auto;
+    margin: 10px 20px;
     padding: 10px 15px;
     background-color: #f9f9f9;
     border-left: 4px solid #bd1919;
     font-size: 14px;
     line-height: 1.5;
-    text-align: justify;
+    text-align: left;
 }
 
 #citationBlock a {
@@ -149,6 +149,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
 
