@@ -153,8 +153,18 @@ function sortData(column) {
         pagination.appendChild(currentPageDisplay);
     }
 
-    // Event listener for search input
-    searchInput.addEventListener('keyup', filterData);
+    // Go button triggers search
+    document.getElementById('goButton').addEventListener('click', () => {
+        currentPage = 1; // Reset to first page
+        filterData();
+    });
+
+    // Example button autofills and searches
+    document.getElementById('exampleButton').addEventListener('click', () => {
+        searchInput.value = "K04763";
+        currentPage = 1; // Reset to first page
+        filterData();
+    });
 
     // Event listeners for table headers (sorting)
     document.querySelectorAll('.sortable').forEach(header => {
@@ -167,3 +177,4 @@ function sortData(column) {
     // Load CSV data on page load
     loadCSV();
 });
+
